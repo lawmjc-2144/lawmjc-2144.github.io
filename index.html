@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>법무사 맹주초 사무소 · 보내드린 문서</title>
+<meta name="description" content="의뢰인이 면책을 받는 그날까지 · 보내드린 문서를 확인해 주세요.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="법무사 맹주초 사무소">
+<meta property="og:title" content="법무사 맹주초 사무소">
+<meta property="og:description" content="의뢰인이 면책을 받는 그날까지 · 보내드린 문서를 확인해 주세요.">
+<meta property="og:image" content="https://mjc9362.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mjc9362.github.io/og.png">
+<style>
+  :root{color-scheme:light}
+  body{margin:0;font:16px/1.6 "Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;color:#1d2b2a;background:#f6f5f0;display:grid;min-height:100vh;place-items:center}
+  main{width:min(560px,92vw);background:#fff;border-radius:16px;box-shadow:0 6px 30px rgba(0,0,0,.08);padding:28px 24px 24px;text-align:center}
+  img.b{width:100%;height:auto;display:block;margin:0 auto 18px}
+  h1{font-size:19px;margin:0 0 6px}
+  p{margin:6px 0;color:#4a5856}
+  a.go{display:inline-block;margin:16px 0 6px;padding:14px 26px;border-radius:12px;background:#0d4f4a;color:#fff;text-decoration:none;font-weight:700;font-size:17px}
+  small{display:block;color:#7a8684;margin-top:10px}
+  .err{color:#a33}
+</style>
+</head>
+<body>
+<main>
+  <img class="b" src="banner.jpg" alt="법무사 맹주초 사무소 — 의뢰인이 면책을 받는 그날까지">
+  <h1 id="t">보내드린 문서를 여는 중입니다…</h1>
+  <p id="d">잠시 후 문서가 자동으로 열립니다.</p>
+  <a class="go" id="go" href="#" hidden>📄 문서 열기</a>
+  <small>PDF 비밀번호는 생년월일 6자리입니다(예: 1980년 1월 2일생 → 800102).<br>문의 044-863-0105</small>
+</main>
+<script>
+(function(){
+  var q=new URLSearchParams(location.search), f=q.get('f')||'';
+  var t=document.getElementById('t'), d=document.getElementById('d'), go=document.getElementById('go');
+  if(!/^[A-Za-z0-9_-]{20,80}$/.test(f)){t.textContent='문서 주소가 올바르지 않습니다.';t.className='err';d.textContent='받으신 문자의 링크를 다시 눌러 주시거나 사무소(044-863-0105)로 연락해 주세요.';return}
+  var url='https://drive.google.com/file/d/'+f+'/view';
+  go.href=url;go.hidden=false;
+  setTimeout(function(){location.replace(url)},1200);
+})();
+</script>
+</body>
+</html>
